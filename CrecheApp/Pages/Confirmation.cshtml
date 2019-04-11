@@ -1,0 +1,15 @@
+﻿@page
+@model ConfirmationModel
+@using CrecheApp.Models
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Confirmation";
+}
+
+<h2>Confirmation</h2>
+
+<h3>@Html.ViewData.Model.Message</h3>
+
+<h3>@Html.ViewData.Model.Cost</h3>
+
+

@@ -1,0 +1,159 @@
+﻿@page
+@using CrecheApp.Models
+@using Microsoft.AspNetCore.Razor.Language.Intermediate
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model CreateChildModel
+@{
+    ViewData["Title"] = "CreateChild";
+}
+<br />
+<h2>Please Enter your Child's Details Below:</h2>
+
+<div class="row">
+    <div class="col-md-6">
+        <form method="post">
+            <div asp-validation-summary="All"></div>
+            <div class="form-group">
+                <label class="control-label" asp-for=Child.FirstName></label>
+                <input asp-for=Child.FirstName class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label class="control-label" asp-for=Child.LastName></label>
+                <input asp-for=Child.LastName class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label class="control-label" asp-for=Child.PpsId></label>
+                <input asp-for=Child.PpsId class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label class="control-label" asp-for=Child.DOB></label>
+                <input asp-for=Child.DOB class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label class="control-label" asp-for="Child.ChildGender"></label>
+                @*<input asp-for="Child.ChildGender"/>*@
+                @Html.DropDownList("StudentGender",
+                    new SelectList(Enum.GetValues(typeof(Child.Gender))),
+                    "Select Gender",
+                    new {@class = "form-control"})
+            </div>
+            <br />
+            <fieldset>
+                <legend>Please Select Day's Required?</legend>
+                <ul>
+                    <li>
+                        <input type="checkbox" asp-for="Child.Monday" value="true" />
+                        <label class="control-label" asp-for="Child.Monday"></label>
+                    </li>
+                    <li>
+                        <input type="checkbox" asp-for="Child.Tuesday" value="true" />
+                        <label class="control-label" asp-for="Child.Tuesday"></label>
+                    </li>
+                    <li>
+                        <input type="checkbox" asp-for="Child.Wednesday" value="true" />
+                        <label class="control-label" asp-for="Child.Wednesday"></label>
+                    </li>
+                    <li>
+                        <input type="checkbox" asp-for="Child.Thursday" value="true" />
+                        <label class="control-label" asp-for="Child.Thursday"></label>
+                    </li>
+                    <li>
+                        <input type="checkbox" asp-for="Child.Friday" value="true" />
+                        <label class="control-label" asp-for="Child.Friday"></label>
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <legend>Please Select Full Time or Part Time?</legend>
+                <div class="form-group">
+                    FullTime
+                    @Html.RadioButtonFor(Model => Model.Child.FullOrPart, "Full Time")
+                    PartTime
+                    @Html.RadioButtonFor(Model => Model.Child.FullOrPart, "Part Time")
+                </div>
+            </fieldset>
+            <br />
+            <h4>Please Enter Start Date Required?</h4>
+            <br />
+            <div class="form-group">
+                <label class="control-label" asp-for=Child.StartDate></label>
+                <input asp-for=Child.StartDate class="form-control">
+            </div>
+
+            <h4>Please Enter Parent / Guardian Details?</h4>
+            <div class="form-group">
+                <label class="control-label" asp-for=Child.ParentFirstName></label>
+                <input asp-for=Child.ParentFirstName class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label class="control-label" asp-for=Child.ParentLastName></label>
+                <input asp-for=Child.ParentLastName class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label class="control-label" asp-for="Child.ChildRelationship"></label>
+                @Html.DropDownList("Relationship",
+                    new SelectList(Enum.GetValues(typeof(Child.Relationship))),
+                    "Select Relationship",
+                    new {@class = "form-control"})
+            </div>
+
+            <div class="form-group">
+                <label class="control-label" asp-for=Child.Address1></label>
+                <input asp-for=Child.LastName class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label class="control-label" asp-for=Child.Address2></label>
+                <input asp-for=Child.Address2 class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label class="control-label" asp-for=Child.Town></label>
+                <input asp-for=Child.Town class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label class="control-label" asp-for=Child.County></label>
+                <input asp-for=Child.County class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label class="control-label" asp-for=Child.Eircode></label>
+                <input asp-for=Child.Eircode class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label class="control-label" asp-for=Child.Mobile></label>
+                <input asp-for=Child.Mobile class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label" asp-for=Child.Mobile2></label>
+                <input asp-for=Child.Mobile2 class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label" asp-for=Child.OtherPhone></label>
+                <input asp-for=Child.OtherPhone class="form-control">
+            </div>
+            <br />
+            <div class="form-group">
+                <label class="control-label" asp-for=Child.Email></label>
+                <input asp-for=Child.Email class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label" asp-for=Child.Email2></label>
+                <input asp-for=Child.Email2 class="form-control" >
+            </div>
+            <br />
+            <div class="form-group">
+                <button type="submit">Press Me</button>
+            </div>
+        </form>
+
+    </div>
+</div>

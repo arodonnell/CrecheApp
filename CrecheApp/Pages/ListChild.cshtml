@@ -1,0 +1,180 @@
+﻿@page
+@model CrecheApp.Pages.ListChildModel
+
+@{
+    ViewData["Title"] = "ListChild";
+}
+
+<h2>ListChild</h2>
+
+<p>
+    <a href="CreateChild" class="btn btn-primary">Create New</a>
+
+</p> @*List child details entered*@
+<table class="table">
+    <thead>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Child[0].Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Child[0].FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Child[0].LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Child[0].PpsId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Child[0].DOB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Child[0].ChildGender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Child[0].Monday)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Child[0].Tuesday)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Child[0].Wednesday)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Child[0].Thursday)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Child[0].Friday)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Child[0].FullOrPart)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Child[0].ParentFirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Child[0].ParentLastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Child[0].ChildRelationship)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Child[0].Address1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Child[0].Address2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Child[0].Town)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Child[0].County)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Child[0].Eircode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Child[0].Mobile)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Child[0].Mobile2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Child[0].OtherPhone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Child[0].Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Child[0].Email2)
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Child) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PpsId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DOB)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ChildGender)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Monday)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tuesday)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Wednesday)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Thursday)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Friday)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FullOrPart)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ParentFirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ParentLastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ChildRelationship)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Town)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.County)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Eircode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mobile)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mobile2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OtherPhone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email2)
+        </td>
+        <td>
+            <a href="CreateChild" class="btn btn-primary">Edit</a>
+            <br/>
+            <a href="Confirmation" class="btn btn-success">Save</a>
+        </td>
+    </tr>
+}
+    </tbody>
+</table>
