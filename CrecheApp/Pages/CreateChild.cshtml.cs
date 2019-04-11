@@ -26,6 +26,7 @@ namespace CrecheApp.Pages
         public Child Child { get; set; } = new Child();
 
 
+
         public async Task<IActionResult> OnPostAsync()
         {
             if (ModelState.IsValid)

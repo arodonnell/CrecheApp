@@ -35,3 +35,11 @@ body {
         display: none;
     }
 }
+
+.validation-summary-errors {
+    color: red;
+    border: solid 2px;
+    border-color: blue;
+    font-weight: bold;
+    background-color: lightpink;
+}

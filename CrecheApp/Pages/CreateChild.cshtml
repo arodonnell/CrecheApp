@@ -70,10 +70,16 @@
             <fieldset>
                 <legend>Please Select Full Time or Part Time?</legend>
                 <div class="form-group">
-                    FullTime
+                    @*FullTime
                     @Html.RadioButtonFor(Model => Model.Child.FullOrPart, "Full Time")
                     PartTime
-                    @Html.RadioButtonFor(Model => Model.Child.FullOrPart, "Part Time")
+                    @Html.RadioButtonFor(Model => Model.Child.FullOrPart, "Part Time")*@
+                    
+                    <input type="radio" id="fulltime" asp-for="Child.FullOrPart" value="fulltime"/>
+                    <label for="fulltime">Full Time</label>
+                    <input type="radio" id="parttime" asp-for="Child.FullOrPart" value="parttime"/>
+                    <label for="parttime">Part Time</label>
+
                 </div>
             </fieldset>
             <br />
@@ -105,7 +111,7 @@
 
             <div class="form-group">
                 <label class="control-label" asp-for=Child.Address1></label>
-                <input asp-for=Child.LastName class="form-control">
+                <input asp-for=Child.Address1 class="form-control">
             </div>
 
             <div class="form-group">
@@ -140,7 +146,6 @@
                 <label class="control-label" asp-for=Child.OtherPhone></label>
                 <input asp-for=Child.OtherPhone class="form-control">
             </div>
-            <br />
             <div class="form-group">
                 <label class="control-label" asp-for=Child.Email></label>
                 <input asp-for=Child.Email class="form-control">

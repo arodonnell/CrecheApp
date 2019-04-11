@@ -39,23 +39,23 @@ namespace CrecheApp.Pages
             if (days > 3)
             {
                 {
-                    if (FullorPart == "Part Time")
+                    if (FullorPart == "parttime")
                     {
                         cost = ((partTime * numDays) * 90) / 100;
                     }
 
-                    else if (FullorPart == "Full Time")
+                    else if (FullorPart == "fulltime")
                     {
                         cost = ((fullTime * numDays) * 90) / 100;
                     }
                 }
             }
-            else if (FullorPart == "Full Time")
+            else if (FullorPart == "fulltime")
             {
                 cost = numDays * fullTime;
             }
 
-            else if (FullorPart == "Part Time")
+            else if (FullorPart == "parttime")
             {
                 cost = numDays * partTime;
             }
